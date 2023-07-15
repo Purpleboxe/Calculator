@@ -93,3 +93,8 @@
     background: #A7A2A9;
     transform: translateY(-0.1rem);
 }
+
+.selected {
+    background: #9792E3;
+    transform: translateY(-0.1rem);
+}

@@ -23,6 +23,10 @@ numberBtns.forEach((button) => {
 operatorBtns.forEach((button) => {
     button.addEventListener('click', () => {
         setOperation(button.value);
+        operatorBtns.forEach((button) => {
+            button.classList.remove('selected');
+        })
+        button.classList.add('selected');
     })
 })
 
@@ -65,6 +69,9 @@ function evaluate() {
     display.textContent = roundResult(operate(firstNumber, secondNumber, operator));
     operator = null;
     display.textContent = display.textContent.slice(0, 12);
+    operatorBtns.forEach((button) => {
+        button.classList.remove('selected');
+    })
 }
 
 function roundResult(n) {
@@ -77,6 +84,9 @@ function clear() {
     firstNumber = '';
     operator = null;
     secondNumber = '';
+    operatorBtns.forEach((button) => {
+        button.classList.remove('selected');
+    })
 }
 
 function deleteNumber() {
