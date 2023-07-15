@@ -18,6 +18,45 @@
     background: #222823;
     padding: 15px;
     border-radius: 8px;
+    box-shadow: 20px 8px #454745;
+}
+
+.btn-delete {
+    background: #F15152;
+    color: #222823;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 100px;
+    height: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10%;
+    transition: ease-in 0.05s;
+}
+
+.btn-clear {
+    background: #EDB183;
+    color: #222823;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 100px;
+    height: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10%;
+    margin: 3px;
+    transition: ease-in 0.05s;
+}
+
+.btn-top:hover {
+    background: #F4D8CD;
+    transform: translateY(-0.1rem);
+}
+
+#top-buttons {
+    margin-left: 19%;
 }
 
 .btn {
@@ -42,7 +81,7 @@
     text-align: right;
     font-weight: bold;
     padding: 20px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 #buttons {
