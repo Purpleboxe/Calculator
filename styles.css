@@ -6,6 +6,10 @@
     font-family: 'Poppins', 'sans-serif';
 }
 
+body {
+    background-color: whitesmoke;
+}
+
 .container {
     width: 100%;
     height: 100vh;
@@ -15,10 +19,10 @@
 }
 
 #calculator {
-    background: #222823;
+    background: #0d1b2a;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 20px 8px #454745;
+    box-shadow: 20px 8px #1b263b;
 }
 
 .btn-delete {
@@ -61,7 +65,7 @@
 
 .btn {
     background: #F4F7F5;
-    color: #222823;
+    color: #0d1b2a;
     border: none;
     cursor: pointer;
     outline: none;
@@ -90,11 +94,28 @@
 }
 
 .btn:hover {
-    background: #A7A2A9;
+    background: #778da9;
     transform: translateY(-0.1rem);
 }
 
 .selected {
-    background: #9792E3;
+    background: #a9def9;
     transform: translateY(-0.1rem);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#github-logo {
+    width: 25px;
+    transition: ease-out 0.1s;
+}
+
+#github-logo:hover {
+    width: 35px;
 }
