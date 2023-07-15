@@ -35,6 +35,9 @@ clearBtn.addEventListener('click', clear);
 deleteBtn.addEventListener('click', deleteNumber);
 decimalBtn.addEventListener('click', decimal);
 
+// Keyboard functionality
+window.addEventListener('keydown', keyboardInput);
+
 function setNumber(number) {
     // If there is a 0 on the screen or reset is true then remove the number currently on the screen
     if (display.textContent === '0' || reset) {
@@ -109,6 +112,42 @@ function decimal() {
 function resetScreen() {
     display.textContent = '';
     reset = false;
+}
+
+function keyboardInput(e) {
+    if (e.key >= 0 && e.key <= 9) {
+        setNumber(e.key);
+    }
+    if (e.key === '.') {
+        decimal();
+    }
+    if (e.key === '=' || e.key === 'Enter') {
+        evaluate();
+    }
+    if (e.key === 'Escape') {
+        clear();
+    }
+    if (e.key === 'Backspace') {
+        deleteNumber();
+    }
+    if (e.key === '+' || e.key === '-' || e.key === '/' || e.key === '*') {
+        setOperation(convertOperator(e.key));
+    } 
+}
+
+function convertOperator(n) {
+    if (n === '/') {
+        return '÷';
+    }
+    if (n === '*') {
+        return '×';
+    }
+    if (n === '-') {
+        return '−';
+    }
+    if (n === '+') {
+        return '+';
+    }
 }
 
 function operate(x, y, operator) {
